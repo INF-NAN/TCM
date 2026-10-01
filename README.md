@@ -220,7 +220,7 @@ curl -s localhost:8000/api/consult -H 'Content-Type: application/json' \
 | 2 | E3 参考医案换人的改变率 | 0.451 | 闸门 0.4 | `report_e3.json:e3.change_rate=0.451` |
 | 3 | E4 去掉参考医案的改变率 | 0.497 | 闸门 0.4 | `report_e4.json:e4.change_rate=0.497` |
 | 4 | E9 ReAct 开关的改变率 | 0.463 | 只报出 | `report_e9.json:e9.change_rate=0.463` |
-| 5 | TCMEval-SDT Test：chain / baseline（满分 50） | 23.173 / 22.068 | baseline 为同模型、不注入证素分析 | `sdt/test_run_log.jsonl:sdt.chain_last=23.173` `sdt/test_run_log.jsonl:sdt.baseline=22.068` |
+| 5 | TCMEval-SDT Test：chain / baseline（满分 50） | 25.173 / 22.068 | baseline 为同模型、不注入证素分析 | `sdt/test_run_log.jsonl:sdt.chain_last=23.173` `sdt/test_run_log.jsonl:sdt.baseline=22.068` |
 | 6 | TCMEval-SDT Test：关闭安全否决 | 27.729 | 与 #5 的差值是安全否决的代价 | `sdt/test_run_log.jsonl:sdt.ignore_safety_veto=27.729` |
 | 7 | 幻觉引用（引用了检索结果之外的医案 id） | 27 条引用中 0 条 | 约束生效的证据，不说明模型不会编造 | `report_e3.json:hallucination.n=27` `report_e3.json:hallucination.n_hallucinated=0` |
 
